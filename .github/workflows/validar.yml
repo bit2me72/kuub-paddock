@@ -1,0 +1,13 @@
+name: Validar
+on: [push, pull_request]
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Existe index.html
+        run: test -s index.html
+      - name: JSON válidos en data/
+        run: |
+          shopt -s nullglob
+          for f in data/*.json; do python3 -m json.tool "$f" > /dev/null || exit 1; done

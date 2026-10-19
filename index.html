@@ -231,7 +231,7 @@ h2 small{font:700 .66rem var(--bd);letter-spacing:.18em;text-transform:uppercase
 .nx{position:relative;border-radius:16px;border-color:rgba(255,255,255,.08);border-top:3px solid var(--c);background:var(--card)}
 .nx.go:hover{border-color:rgba(255,255,255,.2);background:var(--card2)}
 .nx .d{font:600 1rem var(--mono);letter-spacing:-.01em}
-.next .nx:first-child:after{content:"P1";position:absolute;bottom:10px;right:11px;font:700 .64rem var(--mono);letter-spacing:.14em;color:#190b00;background:var(--orange);border-radius:99px;padding:2px 8px;box-shadow:0 0 14px #FF700077}
+.next .nx[data-bd]:after{content:attr(data-bd);position:absolute;bottom:10px;right:11px;font:700 .64rem var(--mono);letter-spacing:.14em;color:#190b00;background:var(--orange);border-radius:99px;padding:2px 8px;box-shadow:0 0 14px #FF700077}
 /* --- barra de busqueda y filtros en pildora --- */
 .bar{background:#0f0f14ee}
 .bar input{border-radius:99px;background:var(--card);padding:11px 18px}
@@ -10125,7 +10125,13 @@ all.sort((a,b)=>a.s-b.s);
 const nTeams=ORGS.reduce((n,o)=>n+o.s.reduce((m,s)=>m+s.tm.filter(t=>t[0]!='#').length,0),0);
 document.getElementById('stats').innerHTML=[[ORGS.length,'Organizadores'],[ORGS.reduce((n,o)=>n+o.s.length,0),'Campeonatos'],[all.length,'Carreras por venir'],[nTeams,'Marcas y equipos']].map(x=>`<div class="stat"><b>${x[0]}</b><span>${x[1]}</span></div>`).join('');
 
-document.getElementById('next').innerHTML=all.filter(r=>!r.tbc).slice(0,8).map(r=>`<div class="nx go" data-i="${r.i}" style="--c:${r.col}"><div class="d">${fd(r.a,r.b)} ${r.s.getFullYear()}</div><div class="e">${r.ev}</div><div class="t">${flag(r.c)} ${r.tr}<br>${r.ser}</div></div>`).join('');
+document.getElementById('next').innerHTML=all.filter(r=>!r.tbc).slice(0,8).map(r=>`<div class="nx go" data-i="${r.i}" data-a="${r.a}" data-b="${r.b}" style="--c:${r.col}"><div class="d">${fd(r.a,r.b)} ${r.s.getFullYear()}</div><div class="e">${r.ev}</div><div class="t">${flag(r.c)} ${r.tr}<br>${r.ser}</div></div>`).join('');
+(function(){const P=n=>String(n).padStart(2,'0'),iso=d=>d.getFullYear()+'-'+P(d.getMonth()+1)+'-'+P(d.getDate());
+ function badges(){const t=new Date(),td=iso(t),w=(t.getDay()+6)%7,m=new Date(t.getFullYear(),t.getMonth(),t.getDate()-w),su=new Date(m.getFullYear(),m.getMonth(),m.getDate()+6),ms=iso(m),se=iso(su);
+  document.querySelectorAll('#next .nx').forEach(c=>{const a=c.dataset.a,b=c.dataset.b;let x='';
+   if(a<=td&&td<=b)x='HOY';else if(a>td&&a<=se&&b>=ms)x='ESTA SEMANA';
+   if(x)c.dataset.bd=x;else c.removeAttribute('data-bd')})}
+ badges();document.addEventListener('visibilitychange',()=>{if(!document.hidden)badges()});setInterval(badges,600000)})();
 
 // ---- HORARIOS: una sola fuente de verdad. Clave = 'inicio-del-evento|clave-de-serie'. Cada sesión: [fecha, hora local del circuito, etiqueta, duración en min (si la fuente la da)].
 // Solo se anotan horas publicadas por fuentes oficiales; lo que no está aquí se muestra como "Horario por publicar". tz = zona IANA del circuito. v = fecha de verificación.

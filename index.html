@@ -10372,17 +10372,13 @@ const STAND=[{ser:'WEC',col:'#3b82f6',after:'6 Horas de Barcelona (ronda 7)',u:'
 })();
 </script>
 <style>
-.inst{display:none;position:relative;align-items:center;gap:14px;margin:22px 0 0;padding:14px 44px 14px 14px;background:linear-gradient(120deg,rgba(245,89,37,.22),rgba(245,89,37,.06) 55%,rgba(27,34,39,.9));border:1px solid rgba(245,89,37,.55);border-radius:18px;box-shadow:0 0 0 1px rgba(245,89,37,.12),0 10px 30px rgba(0,0,0,.35)}
-.inst.show{display:flex}
-.inst img{flex:none;width:58px;height:58px;border-radius:14px;box-shadow:0 4px 14px rgba(0,0,0,.45)}
-.inst .it{flex:1;min-width:0;text-align:left}
-.inst .it>b{display:block;font:700 17px/1.2 var(--hd);letter-spacing:.04em;text-transform:uppercase;color:var(--tx)}
-.inst .it span{display:block;margin-top:3px;font:13px/1.4 var(--bd);color:var(--mist)}.inst .it span b{display:inline;font:700 13px var(--bd);color:var(--orange);text-transform:none;letter-spacing:0}
-.inst .go{flex:none;font:700 13px var(--bd);letter-spacing:.06em;text-transform:uppercase;color:#fff;background:var(--orange);border:0;border-radius:999px;padding:12px 20px;cursor:pointer;animation:instp 2.4s ease-in-out infinite}
-.inst .go:hover{background:var(--orange-soft)}
-.inst .cl{position:absolute;top:6px;right:8px;width:30px;height:30px;border:0;background:none;color:var(--mu);font-size:20px;line-height:1;cursor:pointer}
-@keyframes instp{0%,100%{box-shadow:0 0 0 0 rgba(245,89,37,.55)}50%{box-shadow:0 0 0 9px rgba(245,89,37,0)}}
-@media(max-width:560px){.inst{flex-wrap:wrap;padding-right:40px}.inst .go{width:100%}}
+.inst{display:flex;justify-content:center;margin:0 0 22px}
+.inst .go{display:inline-flex;align-items:center;gap:10px;padding:6px 18px 6px 6px;font:700 13px var(--bd);letter-spacing:.06em;text-transform:uppercase;color:#fff;background:var(--orange);border:0;border-radius:999px;cursor:pointer;-webkit-tap-highlight-color:transparent;animation:instp 2.4s ease-in-out infinite}
+.inst .go img{width:34px;height:34px;border-radius:9px;display:block}
+.instm{position:fixed;left:12px;right:12px;bottom:14px;z-index:99;max-width:420px;margin:0 auto;padding:14px 40px 14px 16px;background:#1b2125;border:1px solid rgba(245,89,37,.6);border-radius:14px;color:var(--tx);font:14px/1.45 var(--bd);box-shadow:0 10px 30px rgba(0,0,0,.5)}
+.instm b{color:var(--orange)}
+.instm .cl{position:absolute;top:6px;right:8px;background:0;border:0;color:var(--mu);font-size:22px;line-height:1;cursor:pointer}
+@keyframes instp{0%,100%{box-shadow:0 0 0 0 rgba(245,89,37,.55)}50%{box-shadow:0 0 0 8px rgba(245,89,37,0)}}
 @media(prefers-reduced-motion:reduce){.inst .go{animation:none}}
 </style>
 <script>
@@ -10393,32 +10389,28 @@ const STAND=[{ser:'WEC',col:'#3b82f6',after:'6 Horas de Barcelona (ronda 7)',u:'
  }
  var standalone=window.matchMedia('(display-mode: standalone)').matches||navigator.standalone===true;
  if(standalone)return;
- try{if(localStorage.getItem('kp-inst-no')==='1')return}catch(e){}
- var hd=document.querySelector('header.hero');if(!hd)return;
- var box=document.createElement('div');box.className='inst';box.id='inst';hd.insertAdjacentElement('afterend',box);
- function shell(txt,btn){
-  box.innerHTML='<img src="icon-192.png" alt="" width="58" height="58"><div class="it"><b>Instala Kuub Paddock</b><span>'+txt+'</span></div>'+(btn?'<button type="button" class="go">Instalar app</button>':'')+'<button type="button" class="cl" aria-label="Cerrar">×</button>';
-  box.classList.add('show');
-  box.querySelector('.cl').addEventListener('click',function(){box.classList.remove('show');try{localStorage.setItem('kp-inst-no','1')}catch(e){}});
+ var ft=document.querySelector('footer.pfoot');if(!ft)return;
+ var box=document.createElement('div');box.className='inst';box.id='inst';
+ box.innerHTML='<button type="button" class="go"><img src="icon-192.png" alt="" width="34" height="34">Instalar app</button>';
+ ft.insertBefore(box,ft.querySelector('.pk')||ft.firstChild);
+ var ev=null,ua=navigator.userAgent,ios=/iPhone|iPad|iPod/.test(ua)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+ window.addEventListener('beforeinstallprompt',function(e){e.preventDefault();ev=e});
+ window.addEventListener('appinstalled',function(){box.style.display='none'});
+ function help(){
+  var old=document.getElementById('instm');if(old)old.remove();
+  var m=document.createElement('div');m.className='instm';m.id='instm';
+  var t=ios?'Toca <b>Compartir</b> (el cuadro con flecha, abajo en Safari) y luego <b>Añadir a pantalla de inicio</b>.'
+   :(/Macintosh/.test(ua)&&!/Chrome|Edg/.test(ua))?'En Safari: menú <b>Archivo</b> y luego <b>Añadir al Dock</b>.'
+   :'Abre el menú <b>⋮</b> del navegador y elige <b>Instalar app</b> o <b>Añadir a pantalla de inicio</b>.';
+  if(ios&&!/Safari/.test(ua)||ios&&/CriOS|FxiOS/.test(ua))t='Abre esta página en <b>Safari</b>, toca <b>Compartir</b> y luego <b>Añadir a pantalla de inicio</b>.';
+  m.innerHTML=t+'<button type="button" class="cl" aria-label="Cerrar">×</button>';
+  document.body.appendChild(m);
+  m.querySelector('.cl').onclick=function(){m.remove()};
+  setTimeout(function(){if(m.parentNode)m.remove()},12000);
  }
- var ev=null;
- window.addEventListener('beforeinstallprompt',function(e){
-  e.preventDefault();ev=e;
-  shell('Ábrela como app, a pantalla completa y sin conexión.',true);
-  box.querySelector('.go').addEventListener('click',function(){ev.prompt();ev.userChoice.finally(function(){box.classList.remove('show');ev=null})});
+ box.querySelector('.go').addEventListener('click',function(){
+  if(ev){ev.prompt();ev.userChoice.finally(function(){ev=null})}else help();
  });
- window.addEventListener('appinstalled',function(){box.classList.remove('show')});
- var ua=navigator.userAgent,ios=/iPhone|iPad|iPod/.test(ua)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
- if(ios&&/Safari/.test(ua)&&!/CriOS|FxiOS/.test(ua)){
-  shell('En tu iPhone: toca <b>Compartir</b> y luego <b>Añadir a pantalla de inicio</b>.',false);
- }
- else{
-  setTimeout(function(){
-   if(ev||box.classList.contains('show'))return;
-   var mac=/Macintosh/.test(ua)&&!/Chrome|Edg/.test(ua);
-   shell(mac?'En Safari: menú <b>Archivo</b> y luego <b>Añadir al Dock</b>.':'En el navegador: menú <b>⋮</b> y luego <b>Instalar Kuub Paddock</b> (o el icono de instalar en la barra de direcciones).',false);
-  },2500);
- }
 })();
 </script>
 <script>

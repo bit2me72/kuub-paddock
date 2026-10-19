@@ -231,7 +231,7 @@ h2 small{font:700 .66rem var(--bd);letter-spacing:.18em;text-transform:uppercase
 .nx{position:relative;border-radius:16px;border-color:rgba(255,255,255,.08);border-top:3px solid var(--c);background:var(--card)}
 .nx.go:hover{border-color:rgba(255,255,255,.2);background:var(--card2)}
 .nx .d{font:600 1rem var(--mono);letter-spacing:-.01em}
-.next .nx:first-child:after{content:"P1";position:absolute;top:10px;right:11px;font:700 .64rem var(--mono);letter-spacing:.14em;color:#190b00;background:var(--orange);border-radius:99px;padding:2px 8px;box-shadow:0 0 14px #FF700077}
+.next .nx:first-child:after{content:"P1";position:absolute;bottom:10px;right:11px;font:700 .64rem var(--mono);letter-spacing:.14em;color:#190b00;background:var(--orange);border-radius:99px;padding:2px 8px;box-shadow:0 0 14px #FF700077}
 /* --- barra de busqueda y filtros en pildora --- */
 .bar{background:#0f0f14ee}
 .bar input{border-radius:99px;background:var(--card);padding:11px 18px}
@@ -10360,7 +10360,7 @@ const PODIOS=[
  const SHOW=4;box.innerHTML=list.slice(0,SHOW).map(card).join('')+(list.length>SHOW?`<details><summary class="chip pmore">Ver ${list.length-SHOW} más</summary>${list.slice(SHOW).map((r,i)=>card(r,i+SHOW)).join('')}</details>`:'');
  box.addEventListener('click',e=>{const b=e.target.closest('.ptab');if(!b)return;const c=b.closest('.pcard');c.querySelectorAll('.ptab').forEach(x=>x.classList.toggle('on',x==b));c.querySelectorAll('.ppn').forEach(x=>x.classList.toggle('on',x.id=='pp'+b.dataset.k))});
 })();
-const STAND=[{ser:'WEC',col:'#3b82f6',after:'6 Horas de Barcelona (ronda 7)',u:'https://www.fiawec.com/en/page/manufacturers-classification',src:'FIA WEC (clasificación de constructores)',v:'2026-10-19',tabs:[{n:'Constructores',rows:[['Toyota',212],['BMW',154],['Ferrari',130],['Cadillac',118],['Alpine',104],['Aston Martin',58],['Peugeot',24],['Genesis',14]]}]}];
+const STAND=[{ser:'WEC',col:'#3b82f6',after:'6 Horas de Barcelona (ronda 7)',u:'https://www.fiawec.com/en/page/manufacturers-classification',src:'FIA WEC (clasificaciones oficiales)',v:'2026-10-19',tabs:[{n:'Constructores',rows:[['Toyota',212],['BMW',154],['Ferrari',130],['Cadillac',118],['Alpine',104],['Aston Martin',58],['Peugeot',24],['Genesis',14]]},{n:'Pilotos',rows:[['Hartley / Hirakawa / Buemi · #8', 114], ['Kobayashi / Conway / De Vries · #7', 97], ['Magnussen / Marciello · #15', 75], ['Rast / Frijns · #20', 75], ['D. Vanthoor · #15', 69], ['Fuoco / Molina / Nielsen · #50', 69], ['Van der Linde · #20', 65], ['Pier Guidi / Giovinazzi / Calado · #51', 59], ['Nato / Stevens · #12', 58], ['Milesi / Habsburg · #35', 57], ['Bamber / Bourdais · #38', 56], ['Aitken · #38', 52], ['Félix da Costa · #35', 44], ['Tincknell / Gamble · #007', 42], ['Hanson / Kubica / Ye · #83', 41], ['Gounon / Martins · #36', 36], ['Delétraz · #12', 26], ['Makowiecki · #36', 14], ['Duval / Jakobsen / Pourchaire · #94', 12], ['Lotterer / Derani / Jaubert · #17', 11], ['Lynn · #12', 8], ['Gunn · #007', 8], ['Cassidy / Di Resta · #93', 6], ['Vandoorne · #93', 6], ['Riberas / Sørensen · #009', 6], ['R. Taylor · #101', 2], ['Juncadella / Jaminet / Chatin · #19', 0], ['Quinn · #93', 0], ['De Angelis · #009', 0]]}]}];
 (function(){
  const sb=document.getElementById('standlist'),pl=document.getElementById('podlist');if(!sb)return;
  const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));

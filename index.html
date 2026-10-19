@@ -10412,6 +10412,13 @@ const STAND=[{ser:'WEC',col:'#3b82f6',after:'6 Horas de Barcelona (ronda 7)',u:'
  if(ios&&/Safari/.test(ua)&&!/CriOS|FxiOS/.test(ua)){
   shell('En tu iPhone: toca <b>Compartir</b> y luego <b>Añadir a pantalla de inicio</b>.',false);
  }
+ else{
+  setTimeout(function(){
+   if(ev||box.classList.contains('show'))return;
+   var mac=/Macintosh/.test(ua)&&!/Chrome|Edg/.test(ua);
+   shell(mac?'En Safari: menú <b>Archivo</b> y luego <b>Añadir al Dock</b>.':'En el navegador: menú <b>⋮</b> y luego <b>Instalar Kuub Paddock</b> (o el icono de instalar en la barra de direcciones).',false);
+  },2500);
+ }
 })();
 </script>
 <script>

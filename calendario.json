@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "generated": "2026-11-02T22:19:52.194Z",
+ "generated": "2026-11-04T22:36:16.807Z",
  "displayTz": "America/Mexico_City",
  "displayUtcOffsetSeconds": -21600,
  "note": "ts = segundos epoch UTC. start/end = fechas locales del circuito (YYYY-MM-DD). Si sessions está vacío, el horario aún no se publica.",
- "count": 105,
+ "count": 106,
  "races": [
   {
    "start": "2026-10-08",
@@ -219,6 +219,41 @@
    "tz": "Europe/Rome",
    "sessions": [
     {
+     "ts": 1793957400,
+     "label": "Libres 1",
+     "local": "2026-11-06 10:30"
+    },
+    {
+     "ts": 1793971800,
+     "label": "Libres 2",
+     "local": "2026-11-06 14:30"
+    },
+    {
+     "ts": 1794043800,
+     "label": "Libres 3",
+     "local": "2026-11-07 10:30"
+    },
+    {
+     "ts": 1794057600,
+     "label": "Clasificación LMGT3",
+     "local": "2026-11-07 14:20"
+    },
+    {
+     "ts": 1794058800,
+     "label": "Hyperpole LMGT3",
+     "local": "2026-11-07 14:40"
+    },
+    {
+     "ts": 1794060000,
+     "label": "Clasificación Hypercar",
+     "local": "2026-11-07 15:00"
+    },
+    {
+     "ts": 1794061200,
+     "label": "Hyperpole Hypercar",
+     "local": "2026-11-07 15:20"
+    },
+    {
      "ts": 1794132000,
      "label": "Carrera",
      "local": "2026-11-08 11:00",
@@ -228,7 +263,7 @@
    "source": {
     "name": "FIA WEC (página oficial de la carrera)",
     "url": "https://www.fiawec.com/en/race/6-hours-of-monza-2026",
-    "verified": "2026-10-11"
+    "verified": "2026-11-04"
    },
    "id": 9
   },
@@ -244,7 +279,49 @@
    "seriesName": "Super GT",
    "org": "gta",
    "color": "#ec4899",
-   "sessions": [],
+   "tz": "Asia/Tokyo",
+   "sessions": [
+    {
+     "ts": 1793925000,
+     "label": "Práctica",
+     "local": "2026-11-06 09:30"
+    },
+    {
+     "ts": 1793929200,
+     "label": "Práctica (GT300)",
+     "local": "2026-11-06 10:40"
+    },
+    {
+     "ts": 1793929800,
+     "label": "Práctica (GT500)",
+     "local": "2026-11-06 10:50"
+    },
+    {
+     "ts": 1794009600,
+     "label": "Q1 GT300",
+     "local": "2026-11-07 09:00"
+    },
+    {
+     "ts": 1794011400,
+     "label": "Q1 GT500",
+     "local": "2026-11-07 09:30"
+    },
+    {
+     "ts": 1794022200,
+     "label": "Warm-up",
+     "local": "2026-11-07 12:30"
+    },
+    {
+     "ts": 1794027600,
+     "label": "Carrera 1 (Ronda 3, 53 vueltas)",
+     "local": "2026-11-07 14:00"
+    }
+   ],
+   "source": {
+    "name": "The Racing Line (app; NO oficial, supergt.net sigue vacío)",
+    "url": "https://theracingline.app/race-calendar",
+    "verified": "2026-11-04"
+   },
    "id": 10
   },
   {
@@ -259,7 +336,34 @@
    "seriesName": "Super GT",
    "org": "gta",
    "color": "#ec4899",
-   "sessions": [],
+   "tz": "Asia/Tokyo",
+   "sessions": [
+    {
+     "ts": 1794098700,
+     "label": "Q2 GT300",
+     "local": "2026-11-08 09:45"
+    },
+    {
+     "ts": 1794100500,
+     "label": "Q2 GT500",
+     "local": "2026-11-08 10:15"
+    },
+    {
+     "ts": 1794108600,
+     "label": "Warm-up",
+     "local": "2026-11-08 12:30"
+    },
+    {
+     "ts": 1794114000,
+     "label": "Carrera 2 (Ronda 8, 53 vueltas)",
+     "local": "2026-11-08 14:00"
+    }
+   ],
+   "source": {
+    "name": "The Racing Line (app; NO oficial, supergt.net sigue vacío)",
+    "url": "https://theracingline.app/race-calendar",
+    "verified": "2026-11-04"
+   },
    "id": 11
   },
   {
@@ -277,20 +381,50 @@
    "tz": "Europe/Paris",
    "sessions": [
     {
-     "ts": 1794664800,
-     "label": "Carrera 1",
-     "local": "2026-11-14 15:00"
+     "ts": 1794561000,
+     "label": "Libres 1",
+     "local": "2026-11-13 10:10"
     },
     {
-     "ts": 1794747600,
+     "ts": 1794573000,
+     "label": "Libres 2",
+     "local": "2026-11-13 13:30"
+    },
+    {
+     "ts": 1794582300,
+     "label": "Clasificación GT3 (1)",
+     "local": "2026-11-13 16:05"
+    },
+    {
+     "ts": 1794583500,
+     "label": "Clasificación GT3 (2)",
+     "local": "2026-11-13 16:25"
+    },
+    {
+     "ts": 1794585000,
+     "label": "Clasificación Hypercar/LMP2 (1)",
+     "local": "2026-11-13 16:50"
+    },
+    {
+     "ts": 1794586200,
+     "label": "Clasificación Hypercar/LMP2 (2)",
+     "local": "2026-11-13 17:10"
+    },
+    {
+     "ts": 1794658500,
+     "label": "Carrera 1",
+     "local": "2026-11-14 13:15"
+    },
+    {
+     "ts": 1794744900,
      "label": "Carrera 2",
-     "local": "2026-11-15 14:00"
+     "local": "2026-11-15 13:15"
     }
    ],
    "source": {
     "name": "asianlemansseries.com",
     "url": "https://www.asianlemansseries.com/en/race/4-hours-of-le-castellet-by-alms-2026",
-    "verified": "2026-10-19"
+    "verified": "2026-11-04"
    },
    "id": 12
   },
@@ -343,15 +477,33 @@
    "tz": "Africa/Johannesburg",
    "sessions": [
     {
-     "ts": 1799488800,
-     "label": "Carrera principal 24H",
-     "local": "2027-01-09 12:00"
+     "ts": 1799397000,
+     "label": "Libres",
+     "local": "2027-01-08 10:30",
+     "mins": 90
+    },
+    {
+     "ts": 1799408700,
+     "label": "Clasificación",
+     "local": "2027-01-08 13:45",
+     "mins": 166
+    },
+    {
+     "ts": 1799429400,
+     "label": "Libres nocturnos",
+     "local": "2027-01-08 19:30",
+     "mins": 90
+    },
+    {
+     "ts": 1799492400,
+     "label": "Salida de la carrera 24H",
+     "local": "2027-01-09 13:00"
     }
    ],
    "source": {
     "name": "24hseries.com",
     "url": "https://www.24hseries.com",
-    "verified": "2026-10-19"
+    "verified": "2026-11-04"
    },
    "id": 14
   },
@@ -367,7 +519,54 @@
    "seriesName": "Asian Le Mans Series",
    "org": "aco",
    "color": "#8b5cf6",
-   "sessions": [],
+   "tz": "Europe/Madrid",
+   "sessions": [
+    {
+     "ts": 1800004200,
+     "label": "Libres 1",
+     "local": "2027-01-15 10:10"
+    },
+    {
+     "ts": 1800016200,
+     "label": "Libres 2",
+     "local": "2027-01-15 13:30"
+    },
+    {
+     "ts": 1800025500,
+     "label": "Clasificación GT3 (1)",
+     "local": "2027-01-15 16:05"
+    },
+    {
+     "ts": 1800026700,
+     "label": "Clasificación GT3 (2)",
+     "local": "2027-01-15 16:25"
+    },
+    {
+     "ts": 1800028200,
+     "label": "Clasificación Hypercar/LMP2 (1)",
+     "local": "2027-01-15 16:50"
+    },
+    {
+     "ts": 1800029400,
+     "label": "Clasificación Hypercar/LMP2 (2)",
+     "local": "2027-01-15 17:10"
+    },
+    {
+     "ts": 1800103500,
+     "label": "Carrera 1",
+     "local": "2027-01-16 13:45"
+    },
+    {
+     "ts": 1800189900,
+     "label": "Carrera 2",
+     "local": "2027-01-17 13:45"
+    }
+   ],
+   "source": {
+    "name": "asianlemansseries.com",
+    "url": "https://www.asianlemansseries.com",
+    "verified": "2026-11-04"
+   },
    "id": 15
   },
   {
@@ -598,7 +797,7 @@
   {
    "start": "2027-04-03",
    "end": "2027-04-04",
-   "name": "Okayama · apertura",
+   "name": "Okayama · apertura · planeado",
    "circuit": "Okayama International Circuit",
    "cc": "JP",
    "tbc": false,
@@ -778,7 +977,7 @@
   {
    "start": "2027-05-03",
    "end": "2027-05-04",
-   "name": "Fuji · Golden Week",
+   "name": "Fuji · Golden Week · planeado",
    "circuit": "Fuji Speedway",
    "cc": "JP",
    "tbc": false,
@@ -1046,6 +1245,21 @@
    "id": 60
   },
   {
+   "start": "2027-06-18",
+   "end": "2027-06-19",
+   "name": "Sepang (regresa) · planeado",
+   "circuit": "Petronas Sepang International Circuit",
+   "cc": "MY",
+   "tbc": false,
+   "series": "super-gt",
+   "seriesShort": "Super GT",
+   "seriesName": "Super GT",
+   "org": "gta",
+   "color": "#ec4899",
+   "sessions": [],
+   "id": 61
+  },
+  {
    "start": "2027-06-24",
    "end": "2027-06-27",
    "name": "Six Hours of The Glen",
@@ -1058,7 +1272,7 @@
    "org": "imsa",
    "color": "#ef4444",
    "sessions": [],
-   "id": 61
+   "id": 62
   },
   {
    "start": "2027-06-24",
@@ -1073,7 +1287,7 @@
    "org": "sro",
    "color": "#f59e0b",
    "sessions": [],
-   "id": 62
+   "id": 63
   },
   {
    "start": "2027-06-24",
@@ -1087,22 +1301,6 @@
    "seriesName": "GT World Challenge Europe",
    "org": "sro",
    "color": "#f59e0b",
-   "sessions": [],
-   "id": 63
-  },
-  {
-   "start": null,
-   "end": null,
-   "month": "2027-06",
-   "name": "Sepang (regresa)",
-   "circuit": "Petronas Sepang International Circuit",
-   "cc": "MY",
-   "tbc": true,
-   "series": "super-gt",
-   "seriesShort": "Super GT",
-   "seriesName": "Super GT",
-   "org": "gta",
-   "color": "#ec4899",
    "sessions": [],
    "id": 64
   },
@@ -1242,9 +1440,9 @@
    "id": 73
   },
   {
-   "start": "2027-08-01",
+   "start": "2027-07-31",
    "end": "2027-08-01",
-   "name": "Suzuka",
+   "name": "Suzuka · planeado",
    "circuit": "Suzuka Circuit",
    "cc": "JP",
    "tbc": false,
@@ -1302,6 +1500,21 @@
    "id": 77
   },
   {
+   "start": "2027-08-20",
+   "end": "2027-08-22",
+   "name": "Nürburgring",
+   "circuit": "Nürburgring GP",
+   "cc": "DE",
+   "tbc": false,
+   "series": "dtm",
+   "seriesShort": "DTM",
+   "seriesName": "DTM · Deutsche Tourenwagen Masters",
+   "org": "adac",
+   "color": "#eab308",
+   "sessions": [],
+   "id": 78
+  },
+  {
    "start": "2027-08-27",
    "end": "2027-08-29",
    "name": "Nürburgring · Endurance",
@@ -1314,7 +1527,7 @@
    "org": "sro",
    "color": "#f59e0b",
    "sessions": [],
-   "id": 78
+   "id": 79
   },
   {
    "start": "2027-08-27",
@@ -1328,22 +1541,6 @@
    "seriesName": "GT World Challenge America",
    "org": "sro",
    "color": "#f59e0b",
-   "sessions": [],
-   "id": 79
-  },
-  {
-   "start": null,
-   "end": null,
-   "month": "2027-08",
-   "name": "Nürburgring (fin de agosto)",
-   "circuit": "Nürburgring GP",
-   "cc": "DE",
-   "tbc": true,
-   "series": "dtm",
-   "seriesShort": "DTM",
-   "seriesName": "DTM · Deutsche Tourenwagen Masters",
-   "org": "adac",
-   "color": "#eab308",
    "sessions": [],
    "id": 80
   },
@@ -1498,6 +1695,21 @@
    "id": 90
   },
   {
+   "start": "2027-09-18",
+   "end": "2027-09-19",
+   "name": "Sportsland Sugo · planeado",
+   "circuit": "Sportsland Sugo",
+   "cc": "JP",
+   "tbc": false,
+   "series": "super-gt",
+   "seriesShort": "Super GT",
+   "seriesName": "Super GT",
+   "org": "gta",
+   "color": "#ec4899",
+   "sessions": [],
+   "id": 91
+  },
+  {
    "start": "2027-09-24",
    "end": "2027-09-26",
    "name": "6 Horas de Fuji",
@@ -1510,37 +1722,20 @@
    "org": "aco",
    "color": "#8b5cf6",
    "sessions": [],
-   "id": 91
+   "id": 92
   },
   {
-   "start": null,
-   "end": null,
-   "month": "2027-09",
+   "start": "2027-09-24",
+   "end": "2027-09-26",
    "name": "Sachsenring",
    "circuit": "Sachsenring",
    "cc": "DE",
-   "tbc": true,
+   "tbc": false,
    "series": "dtm",
    "seriesShort": "DTM",
    "seriesName": "DTM · Deutsche Tourenwagen Masters",
    "org": "adac",
    "color": "#eab308",
-   "sessions": [],
-   "id": 92
-  },
-  {
-   "start": null,
-   "end": null,
-   "month": "2027-09",
-   "name": "Sportsland Sugo",
-   "circuit": "Sportsland Sugo",
-   "cc": "JP",
-   "tbc": true,
-   "series": "super-gt",
-   "seriesShort": "Super GT",
-   "seriesName": "Super GT",
-   "org": "gta",
-   "color": "#ec4899",
    "sessions": [],
    "id": 93
   },
@@ -1635,6 +1830,21 @@
    "id": 99
   },
   {
+   "start": "2027-10-16",
+   "end": "2027-10-17",
+   "name": "Autopolis · planeado",
+   "circuit": "Autopolis International Racing Course",
+   "cc": "JP",
+   "tbc": false,
+   "series": "super-gt",
+   "seriesShort": "Super GT",
+   "seriesName": "Super GT",
+   "org": "gta",
+   "color": "#ec4899",
+   "sessions": [],
+   "id": 100
+  },
+  {
    "start": "2027-10-22",
    "end": "2027-10-24",
    "name": "Barcelona · Endurance (final)",
@@ -1647,7 +1857,7 @@
    "org": "sro",
    "color": "#f59e0b",
    "sessions": [],
-   "id": 100
+   "id": 101
   },
   {
    "start": "2027-10-22",
@@ -1662,7 +1872,7 @@
    "org": "sro",
    "color": "#f59e0b",
    "sessions": [],
-   "id": 101
+   "id": 102
   },
   {
    "start": "2027-10-29",
@@ -1677,7 +1887,7 @@
    "org": "sro",
    "color": "#f59e0b",
    "sessions": [],
-   "id": 102
+   "id": 103
   },
   {
    "start": "2027-11-04",
@@ -1692,12 +1902,12 @@
    "org": "aco",
    "color": "#8b5cf6",
    "sessions": [],
-   "id": 103
+   "id": 104
   },
   {
    "start": "2027-11-06",
    "end": "2027-11-07",
-   "name": "Fuji",
+   "name": "Fuji · planeado",
    "circuit": "Fuji Speedway",
    "cc": "JP",
    "tbc": false,
@@ -1707,12 +1917,12 @@
    "org": "gta",
    "color": "#ec4899",
    "sessions": [],
-   "id": 104
+   "id": 105
   },
   {
    "start": "2027-11-20",
    "end": "2027-11-21",
-   "name": "Motegi · final",
+   "name": "Motegi · final · planeado",
    "circuit": "Mobility Resort Motegi",
    "cc": "JP",
    "tbc": false,
@@ -1722,7 +1932,7 @@
    "org": "gta",
    "color": "#ec4899",
    "sessions": [],
-   "id": 105
+   "id": 106
   }
  ]
 }

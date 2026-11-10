@@ -361,6 +361,7 @@ dialog#tkd{background:var(--card);border-radius:22px;border-color:rgba(255,255,2
 .ptabs{display:flex;gap:6px;overflow-x:auto;margin:12px 0 8px}
 .ptab{border:1px solid var(--line);background:transparent;color:var(--mu);border-radius:99px;padding:6px 12px;font:700 .66rem var(--bd);letter-spacing:.12em;text-transform:uppercase;cursor:pointer;white-space:nowrap}
 .ptab.on{background:var(--orange);border-color:var(--orange);color:#190b00}
+#standlist .ptabs{flex-wrap:wrap}
 .ppn{display:none}.ppn.on{display:block}
 .prow{display:flex;align-items:center;gap:12px;padding:10px 4px;border-bottom:1px solid #2a343a}
 .prow:last-child{border-bottom:0}
@@ -10368,7 +10369,7 @@ const PODIOS=[
  const SHOW=4;box.innerHTML=list.slice(0,SHOW).map(card).join('')+(list.length>SHOW?`<details><summary class="chip pmore">Ver ${list.length-SHOW} más</summary>${list.slice(SHOW).map((r,i)=>card(r,i+SHOW)).join('')}</details>`:'');
  box.addEventListener('click',e=>{const b=e.target.closest('.ptab');if(!b)return;const c=b.closest('.pcard');c.querySelectorAll('.ptab').forEach(x=>x.classList.toggle('on',x==b));c.querySelectorAll('.ppn').forEach(x=>x.classList.toggle('on',x.id=='pp'+b.dataset.k))});
 })();
-const STAND=[{ser:'WEC',col:'#3b82f6',after:'6 Horas de Monza (ronda 8, final de la temporada)',u:'https://www.fiawec.com/en/page/manufacturers-classification',src:'FIA WEC (clasificación oficial 2026)',v:'2026-11-10',tabs:[{n:'Constructores',rows:[['Toyota',215],['BMW',172],['Ferrari',150],['Cadillac',143],['Alpine',122],['Aston Martin',58],['Peugeot',42],['Genesis',14]]},{n:'Pilotos Hypercar',rows:[['Buemi / Hartley / Hirakawa (Toyota #8)',115],['Kobayashi / Conway / de Vries (Toyota #7)',97],['Magnussen / Marciello (BMW #15)',85],['Bamber / Bourdais (Cadillac #38)',81],['Rast / Frijns (BMW #20)',81]]}]}];
+const STAND=[{ser:'WEC',col:'#3b82f6',after:'6 Horas de Monza (ronda 8, final de la temporada)',u:'https://www.fiawec.com/en/page/manufacturers-classification',src:'FIA WEC (clasificación oficial 2026)',v:'2026-11-10',tabs:[{n:'Constructores',rows:[['Toyota',215],['BMW',172],['Ferrari',150],['Cadillac',143],['Alpine',122],['Aston Martin',58],['Peugeot',42],['Genesis',14]]},{n:'Pilotos Hypercar',rows:[['Buemi / Hartley / Hirakawa (Toyota #8)',115],['Kobayashi / Conway / de Vries (Toyota #7)',97],['Magnussen / Marciello (BMW #15)',85],['Bamber / Bourdais (Cadillac #38)',81],['Rast / Frijns (BMW #20)',81]]},{n:'Equipos LMGT3',rows:[['TF Sport #33 (Corvette)',107],['The Bend Manthey #92 (Porsche)',99],['Team WRT #69 (BMW)',78],['Racing Team Turkey by TF #34 (Corvette)',70],['Heart of Racing #23 (Aston Martin)',69]]},{n:'Pilotos LMGT3',rows:[['Edgar (Corvette #33)',107],['Catsburg (Corvette #33)',103],['Pera / Lietz / Shahin (Porsche #92)',99],['Keating (Corvette #33)',85],['McIntosh / Harper / Thompson (BMW #69)',78]]}]}];
 (function(){
  const sb=document.getElementById('standlist'),pl=document.getElementById('podlist');if(!sb)return;
  const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));

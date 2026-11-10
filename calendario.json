@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated": "2026-11-10T15:54:41.586Z",
+ "generated": "2026-11-10T22:04:55.402Z",
  "displayTz": "America/Mexico_City",
  "displayUtcOffsetSeconds": -21600,
  "note": "ts = segundos epoch UTC. start/end = fechas locales del circuito (YYYY-MM-DD). Si sessions está vacío, el horario aún no se publica.",

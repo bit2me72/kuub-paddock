@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated": "2026-11-04T22:36:16.807Z",
+ "generated": "2026-11-10T15:54:41.586Z",
  "displayTz": "America/Mexico_City",
  "displayUtcOffsetSeconds": -21600,
  "note": "ts = segundos epoch UTC. start/end = fechas locales del circuito (YYYY-MM-DD). Si sessions está vacío, el horario aún no se publica.",
@@ -497,7 +497,8 @@
     {
      "ts": 1799492400,
      "label": "Salida de la carrera 24H",
-     "local": "2027-01-09 13:00"
+     "local": "2027-01-09 13:00",
+     "mins": 1440
     }
    ],
    "source": {

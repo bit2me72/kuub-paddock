@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated": "2026-11-11T17:31:19.518Z",
+ "generated": "2026-11-19T21:21:11.660Z",
  "displayTz": "America/Mexico_City",
  "displayUtcOffsetSeconds": -21600,
  "note": "ts = segundos epoch UTC. start/end = fechas locales del circuito (YYYY-MM-DD). Si sessions está vacío, el horario aún no se publica.",
@@ -440,7 +440,50 @@
    "seriesName": "FIA GT World Cup · Macao",
    "org": "sro",
    "color": "#f59e0b",
-   "sessions": [],
+   "tz": "Asia/Macau",
+   "sessions": [
+    {
+     "ts": 1795061700,
+     "label": "Práctica 1",
+     "local": "2026-11-19 12:15",
+     "mins": 30
+    },
+    {
+     "ts": 1795072500,
+     "label": "Práctica 2",
+     "local": "2026-11-19 15:15",
+     "mins": 30
+    },
+    {
+     "ts": 1795161000,
+     "label": "Clasificación 1",
+     "local": "2026-11-20 15:50",
+     "mins": 30
+    },
+    {
+     "ts": 1795164000,
+     "label": "Clasificación 2",
+     "local": "2026-11-20 16:40",
+     "mins": 25
+    },
+    {
+     "ts": 1795242900,
+     "label": "Carrera de clasificación (12 vueltas)",
+     "local": "2026-11-21 14:35",
+     "mins": 65
+    },
+    {
+     "ts": 1795322100,
+     "label": "Carrera principal GT World Cup (16 vueltas)",
+     "local": "2026-11-22 12:35",
+     "mins": 75
+    }
+   ],
+   "source": {
+    "name": "Gran Premio de Macao (horario oficial, vía capturas de Jaime)",
+    "url": "https://www.macau.grandprix.gov.mo/en/info/schedule",
+    "verified": "2026-11-19"
+   },
    "id": 13
   },
   {

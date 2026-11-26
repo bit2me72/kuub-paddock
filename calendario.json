@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated": "2026-11-26T16:58:50.694Z",
+ "generated": "2026-11-26T19:28:44.446Z",
  "displayTz": "America/Mexico_City",
  "displayUtcOffsetSeconds": -21600,
  "note": "ts = segundos epoch UTC. start/end = fechas locales del circuito (YYYY-MM-DD). Si sessions está vacío, el horario aún no se publica.",
@@ -431,7 +431,7 @@
   {
    "start": "2026-11-19",
    "end": "2026-11-22",
-   "name": "FIA GT World Cup 2026",
+   "name": "Gran Premio de Macao 2026",
    "circuit": "Guia Circuit",
    "cc": "MO",
    "tbc": false,

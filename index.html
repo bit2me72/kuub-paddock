@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#14191C;--card:#1b2227;--card2:#232c31;--line:#333e44;--tx:#F7FAFC;--mu:#9aa6ac;--fia:#3b82f6;--orange:#F55925;--orange-soft:#FF8A5C;--slate:#75848A;--mist:#B9C2C6;--hd:'Roboto Condensed','Arial Narrow',sans-serif;--bd:'Roboto',system-ui,sans-serif}
+:root{--bg:#14191C;--card:#1b2227;--card2:#232c31;--line:#333e44;--tx:#F7FAFC;--mu:#9aa6ac;--fia:#002D5F;--orange:#F55925;--orange-soft:#FF8A5C;--slate:#75848A;--mist:#B9C2C6;--hd:'Roboto Condensed','Arial Narrow',sans-serif;--bd:'Roboto',system-ui,sans-serif}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.55 var(--bd);
 background-image:radial-gradient(900px 520px at 12% -5%,rgba(245,89,37,.15),transparent 62%),radial-gradient(760px 460px at 100% 0,rgba(117,132,138,.13),transparent 70%)}
@@ -239,7 +239,7 @@ h2 small{font:700 .66rem var(--bd);letter-spacing:.18em;text-transform:uppercase
 .srt.t-Carrera{background:var(--sky)}
 .srt.t-Pista{background:var(--orange);color:#190b00}
 /* --- raiz y organizadores --- */
-.root{background:linear-gradient(120deg,#7a2400,#d83f00 55%,#FF7000);border-radius:20px;box-shadow:0 14px 44px #FF700035;position:relative;overflow:hidden}
+.root{background:linear-gradient(120deg,#001a3a,#002D5F 55%,#0b4a8a);border-radius:20px;box-shadow:0 14px 44px #0b4a8a40;position:relative;overflow:hidden}
 .root:after{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(135deg,rgba(255,255,255,.05) 0 2px,transparent 2px 14px)}
 .root b{font-weight:800;letter-spacing:.04em}
 .tree{border-left:2px dashed #353846}.org:before{border-top-color:#353846}
@@ -10086,8 +10086,8 @@ const ORGS=[
 ]},
 {id:'adac',n:'ADAC',r:'Imperio alemán · Europa central',c:'#eab308',s:[
  {n:'DTM · Deutsche Tourenwagen Masters',t:'Estelar sprint · piloto único · 16 carreras en 8 fines de semana.',cl:[['g','GT3','100 % profesionales']],
- cal:['2026-10-09|2026-10-11|Final 2026|Hockenheimring|DE','2027-04-23|2027-04-25|Red Bull Ring · apertura|Red Bull Ring|AT','2027-05-07|2027-05-09|Oschersleben|Motorsport Arena Oschersleben|DE','2027-06-18|2027-06-20|Lausitzring|Dekra Lausitzring|DE','2027-07-02|2027-07-04|Norisring|Norisring, Núremberg|DE','2027-08-06|2027-08-08|Zandvoort|Circuit Zandvoort|NL','2027-08-20|2027-08-22|Nürburgring|Nürburgring GP|DE','2027-09-24|2027-09-26|Sachsenring|Sachsenring|DE','2027-10-08|2027-10-10|Hockenheimring · final|Hockenheimring|DE'],
- tm:[['Audi R8 LMS GT3','Abt Sportsline',''],['BMW M4 GT3 Evo','Schubert Motorsport',''],['Mercedes-AMG GT3','GetSpeed · Landgraf',''],['Ferrari 296 GT3','Emil Frey Racing',''],['Porsche 911 GT3 R','Manthey',''],['Lamborghini · McLaren · Aston Martin','Varios equipos','']],nt:'Referencia 2026. Calendario 2027 según la fuente oficial del DTM.'},
+ cal:['2026-10-09|2026-10-11|Final 2026|Hockenheimring|DE','2027-04-22|2027-04-25|Red Bull Ring · apertura|Red Bull Ring|AT','2027-05-06|2027-05-09|Oschersleben|Motorsport Arena Oschersleben|DE','2027-06-17|2027-06-20|Lausitzring|Dekra Lausitzring|DE','2027-07-01|2027-07-04|Norisring|Norisring, Núremberg|DE','2027-08-05|2027-08-08|Zandvoort|Circuit Zandvoort|NL','2027-08-19|2027-08-22|Nürburgring|Nürburgring GP|DE','2027-09-23|2027-09-26|Sachsenring|Sachsenring|DE','2027-10-07|2027-10-10|Hockenheimring · final|Hockenheimring|DE'],
+ tm:[['Audi R8 LMS GT3','Abt Sportsline',''],['BMW M4 GT3 Evo','Schubert Motorsport',''],['Mercedes-AMG GT3','GetSpeed · Landgraf',''],['Ferrari 296 GT3','Emil Frey Racing',''],['Porsche 911 GT3 R','Manthey',''],['Lamborghini · McLaren · Aston Martin','Varios equipos','']],nt:'Referencia 2026. Calendario 2027 según la fuente oficial del DTM, que marca cada ronda de jueves a domingo.'},
  {n:'ADAC GT Masters',t:'Estelar Pro-Am · pilotos jóvenes y amateurs.',cl:[['g','GT3','']],cal:[],tm:[['Mercedes-AMG · Porsche · Audi · BMW · Ferrari · Lamborghini','Equipos alemanes y europeos','']],nt:'No pude verificar su calendario 2027; consúltalo en adac-motorsport.de.'}
 ]},
 {id:'vln',n:'VLN · ADAC Nordrhein',r:'Nordschleife · Infierno Verde',c:'#22c55e',s:[
@@ -10346,6 +10346,8 @@ const SERWEB=[['wec','FIA WEC','https://www.fiawec.com'],['imsa-weathertech','IM
 <script>
 /* PODIOS: una entrada por carrera disputada. p = [pos, "#num", "Piloto(s)", "Equipo", "Marca"] */
 const PODIOS=[
+{d:'2026-11-22',ev:'FIA GT World Cup · carrera principal',ser:'FIA GT World Cup',cc:'MO',tr:'Guia Circuit',f:'22 nov',col:'#f59e0b',prov:false,src:'FIA (crónica de la carrera) y Sportscar365',u:'https://www.fia.com/news/van-der-linde-mighty-macau-win-drama-filled-fia-gt-world-cup',v:'2026-11-26',n:'Carrera principal de 16 vueltas. Van der Linde ganó por 9.789 s según Sportscar365. El equipo y el número del 2.º y 3.º salen de Sportscar365; la crónica de la FIA no los trae. Picariello terminó 3.º tras las penalizaciones a Thomas Preining (#992 Absolute Racing Porsche): 10 s por exceso de potencia y otra por su incidente con Marciello; Preining terminó 4.º. En la primera vuelta hubo bandera roja por un choque múltiple en Lisboa Bend. Falta el resultado de la carrera de clasificación del sábado.',cls:[
+{n:'GT3',p:[[1,'#31','Kelvin van der Linde','Team WRT','BMW'],[2,'#63','Luca Engstler','Absolute Corse','Lamborghini'],[3,'#911','Alessio Picariello','Absolute Racing','Porsche']]}]},
 {d:'2026-11-08',ev:'6 Horas de Monza · final de la temporada',ser:'WEC',cc:'IT',tr:'Autodromo Nazionale Monza',f:'8 nov',col:'#3b82f6',prov:false,src:'FIA WEC (clasificación final oficial, Hypercar) y fia.com (crónica de la carrera)',u:'https://www.fiawec.com/en/page/resultats-1',v:'2026-11-10',n:'Hypercar: el #38 ganó por 5.607 s al #36 en 191 vueltas (6:01:33.199); el #51 fue 3.º, a 35.767 s, después de que una penalización posterior a la carrera relegó al #007 Aston Martin. LMGT3: el #92 ganó; el #33 TF Sport fue 3.º y cerró el título de pilotos (Edgar) y de equipos. La página oficial no traía el podio LMGT3 ni los pilotos al verificar: salen de motorsport.com y de la crónica de fia.com.',cls:[
 {n:'Hypercar',p:[[1,'#38','Aitken / Bourdais / Bamber','Cadillac Hertz Team JOTA','Cadillac'],[2,'#36','Gounon / Martins','Alpine Endurance Team','Alpine'],[3,'#51','Pier Guidi / Calado / Giovinazzi','Ferrari AF Corse','Ferrari']]},
 {n:'LMGT3',p:[[1,'#92','Shahin / Pera / Lietz','The Bend Manthey','Porsche'],[2,'#23','Newell / Barrichello / Adam','Heart of Racing Team','Aston Martin'],[3,'#33','Keating / Edgar / Catsburg','TF Sport','Corvette']]}]},
